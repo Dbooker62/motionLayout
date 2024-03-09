@@ -1,0 +1,64 @@
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="2000">
+        <OnSwipe
+            motion:touchAnchorId="@id/detailsNameTextView"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragUp"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/detailsNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:rotation="-5" />
+
+        <Constraint
+            android:id="@+id/detailsEpisodesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/detailsNameTextView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:translationZ="10dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:alpha="0" />
+
+        <Constraint
+            android:id="@+id/detailsReviewTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/detailsEpisodesTextView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:translationY="-30dp"
+            android:rotation="5"
+            android:alpha="0" />
+
+        <Constraint
+            android:id="@+id/detailsSeasonsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/detailsReviewTextView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:translationX="30dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:alpha="0" />
+    </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/season_details_scene"
+    android:background="#FF6E40">
+
+    <TextView
+        android:id="@+id/detailsNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Season Name"
+        android:textColor="#FFFFFF"
+    android:textSize="32sp"
+    android:fontFamily="sans-serif-light"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Winter"/>
+
+    <TextView
+        android:id="@+id/detailsEpisodesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Episodes"
+        android:textColor="#B3E5FC"
+    android:textSize="24sp"
+    android:fontFamily="sans-serif"
+    app:layout_constraintTop_toBottomOf="@id/detailsNameTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="10 Episodes"/>
+
+    <TextView
+        android:id="@+id/detailsReviewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Count"
+        android:textColor="#B2FF59"
+    android:textSize="24sp"
+    android:fontFamily="sans-serif"
+    app:layout_constraintTop_toBottomOf="@id/detailsEpisodesTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="100 Reviews"/>
+
+    <TextView
+        android:id="@+id/detailsSeasonsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Seasons"
+        android:textColor="#97EACC"
+    android:textSize="24sp"
+    android:fontFamily="sans-serif"
+    app:layout_constraintTop_toBottomOf="@id/detailsReviewTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:text="5 Seasons"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
